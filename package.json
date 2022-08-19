@@ -1,0 +1,14 @@
+{
+  "name": "phase-1-project-space-website",
+  "version": "1.0.0",
+  "description": "space",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Min Tu",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
