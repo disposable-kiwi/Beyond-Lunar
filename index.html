@@ -6,205 +6,361 @@
   <title>Space</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
   <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
 
 </head>
 
 <body>
-    <div >
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-            <a class="navbar-brand space-nav-brand" href="#">
-                <img src="./public/images/moon_phase_1.png" id="top-nav-moon" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                <span id="navbar-moon-name">Beyond Lunar</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item space-nav-items">
-                    <a class="nav-link active" aria-current="page" href="#">Launches</a>
-                </li>
-                <li class="nav-item space-nav-items">
-                    <a class="nav-link" href="#">Articles</a>
-                </li>
-                <li class="nav-item space-nav-items">
-                    <a class="nav-link" href="#">Events</a>
-                </li>
-                <li class="nav-item space-nav-items">
-                    <a class="nav-link" href="#">Blogs</a>
-                </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand space-nav-brand" href="#">
+          <img src="./public/images/moon_phase_1.png" id="top-nav-moon" alt="" width="30" height="24"
+            class="d-inline-block align-text-top">
+          <span id="navbar-moon-name">Beyond Lunar</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item space-nav-items">
+              <a class="nav-link active" aria-current="page" href="#">Launches</a>
+            </li>
+            <li class="nav-item space-nav-items">
+              <a id="articles-button" class="nav-link" href="#">Articles</a>
+            </li>
+            <li class="nav-item space-nav-items">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item space-nav-items">
+              <a id="blogs-button" class="nav-link" href="#">Blogs</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </div>
 
-    <div class=”container” id="slidey-images">
-        <div>
-    <!-- Carousel of Space Headlines -->
-    <div id="spaceCarouselHeadlines" class="carousel slide pointer-event" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#spaceCarouselHeadlines" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-          <button type="button" data-bs-target="#spaceCarouselHeadlines" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-          <button type="button" data-bs-target="#spaceCarouselHeadlines" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+  <div id="spaceCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#spaceCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#spaceCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#spaceCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="8000">
+        <div id="first-back-img" class="overlay-image"
+          style="background-image:url(https://spacenews.com/wp-content/uploads/2022/08/Firefly_Space_2022-Jul-04_1.jpeg);">
         </div>
-        <div class="carousel-inner" style=" width:100%; height: 500px;">
-          <div class="carousel-item active" id="first-img-back">
-            <img class="d-block w-100 h-50" id="first-back-img" src="" alt="">
-            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg> -->
-            
-            <!-- in case we need the old classes for carousel captions -->
-            <!-- <div class="carousel-caption d-none d-md-block desc-div"> -->
-            <div class="carousel-caption d-md-block desc-div">
-              <a id="first-slide-anchor" href=""><h5 id="first-slide-label">First slide label</h5></a>
-              <p id="first-slide-desc">Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item" id="second-img-back">
-            <img class="d-block w-100 h-50" id="second-back-img" src="" alt="">
-            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg> -->
-      
-            <div class="carousel-caption d-md-block desc-div">
-              <a id="second-slide-anchor" href=""><h5 id="second-slide-label">Second slide label</h5></a>
-              <p id="second-slide-desc">Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item" id="third-img-back">
-            <img class="d-block w-100 h-50" id="third-back-img" src="" alt="">
-            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg> -->
-      
-            <div class="carousel-caption d-md-block desc-div">
-              <a id="third-slide-anchor" href=""><h5 id="third-slide-label">Third slide label</h5></a>
-              <p id="third-slide-desc">Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
+        <div class="container">
+          <h1 id="first-slide-label">Loading Headline...</h1>
+          <p id="first-slide-desc">Loading Summary...</p>
+          <a id="first-slide-anchor" class="btn btn-dark btn-lg btn-primary" href="#">Read More</a>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#spaceCarouselHeadlines" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#spaceCarouselHeadlines" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+      <div class="carousel-item" data-bs-interval="8000">
+        <div id="second-back-img" class="overlay-image"
+          style="background-image:url(https://spacenews.com/wp-content/uploads/2022/08/Firefly_Space_2022-Jul-04_1.jpeg);">
+        </div>
+        <div class="container">
+          <h1 id="second-slide-label">Example 2 Headline</h1>
+          <p id="second-slide-desc">Example 2 text, Example 2 Text</p>
+          <a id="second-slide-anchor" class="btn btn-dark btn-lg btn-primary" href="#">Read More</a>
+        </div>
       </div>
-      <div>
+      <div class="carousel-item" data-bs-interval="8000">
+        <div id="third-back-img" class="overlay-image"
+          style="background-image:url(https://spacenews.com/wp-content/uploads/2022/08/Firefly_Space_2022-Jul-04_1.jpeg);">
+        </div>
+        <div class="container">
+          <h1 id="third-slide-label">Example 3 Headline</h1>
+          <p id="third-slide-desc">Example 3 text, Example 3 Text</p>
+          <a id="third-slide-anchor" class="btn btn-dark btn-lg btn-primary" href="#">Read More</a>
+        </div>
       </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#spaceCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#spaceCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-    <div class="row headlines">
-        
-        <div class="col-lg-9">
-            <div class="card-group">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-              <div class="card-group">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-              <div class="card-group">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-              </div>
+  <div class="album py-5 bg-light" style="float:left;">
+    <div id="thumbs" class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="first-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="first-card-title" class="card-title">Loading title...</h5>
+              <p id="first-card-desc" class="card-text">Loading summary...</p>
+              <a id="first-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-3 col-sm-12 twitter-feed">
-            <a class="twitter-timeline" data-lang="en" data-width="400" data-height="700" data-theme="dark" href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="second-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="second-card-title" class="card-title">Card title</h5>
+              <p id="second-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="second-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
         </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="third-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="third-card-title" class="card-title">Card title</h5>
+              <p id="third-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="third-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="fourth-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="fourth-card-title" class="card-title">Card title</h5>
+              <p id="fourth-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="fourth-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="fifth-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="fifth-card-title" class="card-title">Card title</h5>
+              <p id="fifth-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="fifth-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="sixth-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="sixth-card-title" class="card-title">Card title</h5>
+              <p id="sixth-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="sixth-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="seventh-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="seventh-card-title" class="card-title">Card title</h5>
+              <p id="seventh-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="seventh-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="eighth-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="eighth-card-title" class="card-title">Card title</h5>
+              <p id="eighth-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="eighth-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="ninth-card-image" height="300"
+              src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 id="ninth-card-title" class="card-title">Card title</h5>
+              <p id="ninth-card-desc" class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's
+                content.</p>
+              <a id="ninth-card-link" href="#" class="btn btn-md btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script defer type="text/javascript" src="./src/index.js"></script>
+  </div>
+
+  <div style="float:right; overflow: hidden; padding:1rem;">
+    <a class="twitter-timeline" data-lang="en" data-width="550" data-height="1800" data-theme="dark"
+      href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <!-- <div class="row headlines">
+
+    <div class="col-lg-9">
+      <div class="card-group">
+        <div class="card">
+          <img id="card-one-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="card-one-title" class="card-title">Card title</h5>
+            <p id="card-one-desc" class="card-text">This is a wider card with supporting text below as a natural lead-in
+              to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            <small id="card-one-date" class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img id="card-two-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="card-two-title" class="card-title">Card title</h5>
+            <p id="card-two-desc" class="card-text">This card has supporting text below as a natural lead-in to
+              additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small id="card-one-date" class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img id="card-three-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img id="card-four-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img id="card-five-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img id="card-six-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img id="card-seven-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img id="card-eight-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img id="card-nine-image" src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-12 twitter-feed">
+      <a class="twitter-timeline" data-lang="en" data-width="400" data-height="700" data-theme="dark"
+        href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+  <script defer src="./src/index.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,44 @@
     border-top-right-radius: var(--bs-border-radius);
 }
 
+.carousel-item{
+    height:32rem;
+    background:#000;
+    color:white;
+    position:relative;
+    background-position:center;
+    background-size:cover;
+}
+
+.container{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding-bottom: 50px;
+}
+
+.card-image-top{
+    object-fit:cover;
+}
+
+#thumbs{
+    margin:auto;
+    position:static;
+    display:inline-flex;
+}
+
+.overlay-image{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    background-position: center;
+    background-size:cover;
+    opacity:0.45;
+}
+
 body{
     background-color: black;
 }
@@ -16,7 +54,10 @@ body{
 }
 
 .headlines{
-    margin-top:auto;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
 }
 
 span#navbar-moon-name{
@@ -27,23 +68,19 @@ span#navbar-moon-name{
     font-family: 'Silkscreen', cursive;
 }
 
-.card{
-    border-radius: 25px;
-    margin:5px;
-}
 
-/* .carousel-inner img {
-    margin: auto;
-  } */
-
-.twitter-feed{
+.twitter-timeline{
+    display: inline-flex;
     text-align: center;
+    background-position: center;
+    background-size: cover;
+    float:right;
 }
-
+/* 
 div.carousel-caption p{
     word-break: normal;
     white-space: normal;
-}
+} */
 
 .space-nav-brand{
     padding-left:2rem;
@@ -53,7 +90,7 @@ div.carousel-caption p{
     padding: 0.2rem 1.5rem 0.2rem 1.5rem;
 }
 
-div#spaceCarouselHeadlines a{
+/* div#spaceCarouselHeadlines a{
     color:white;
 }
 
@@ -65,4 +102,4 @@ div#spaceCarouselHeadlines .desc-div{
     border-radius: 25px;
     background-color: rgba(0, 0, 0, .5);
     padding: 5px 10px 5px 10px;
-}
+} */
