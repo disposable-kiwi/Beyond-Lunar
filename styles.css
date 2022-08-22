@@ -46,7 +46,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: grey;
 }
 
 #slidey-images{
@@ -76,6 +76,7 @@ span#navbar-moon-name{
     background-size: cover;
     float:right;
 }
+
 /* 
 div.carousel-caption p{
     word-break: normal;
