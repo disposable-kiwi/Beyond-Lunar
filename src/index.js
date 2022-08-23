@@ -173,14 +173,6 @@ articlesButton.addEventListener('click', async () => {
     let javaScriptObjectReturn = await apiResultJson.json();
     setCarouselSlides(javaScriptObjectReturn);
     cardArticles(javaScriptObjectReturn);
-
-    // fetch('https://api.spaceflightnewsapi.net/v3/articles?_limit=100')
-    // .then(res=>res.json())
-    // .then((data)=>{
-    //     console.log(data);
-    //     setCarouselSlides(data);
-    //     cardArticles(data);
-    // });
 });
 
 reportButton.addEventListener('click', () => {
@@ -232,19 +224,16 @@ blogButton.addEventListener('click', () => {
 function setCarouselSlides(spacePosts) {
     firstAnchor.href = spacePosts[0]["url"];
     firstLabel.textContent = spacePosts[0]["title"];
-    // firstImage.style.backgroundImage = `url(${spacePosts[0]["imageUrl"]})`;
     firstBackImg.style = "background-image:url(" + spacePosts[0]["imageUrl"] + ");";
     firstDesc.textContent = spacePosts[0]["summary"];
 
     secondAnchor.href = spacePosts[1]["url"];
     secondLabel.textContent = spacePosts[1]["title"];
-    // secondImage.style.backgroundImage = `url(${spacePosts[1]["imageUrl"]})`;
     secondBackImg.style = "background-image:url(" + spacePosts[1]["imageUrl"] + ");";
     secondDesc.textContent = spacePosts[1]["summary"];
 
     thirdAnchor.href = spacePosts[2]["url"];
     thirdLabel.textContent = spacePosts[2]["title"];
-    // thirdImage.style.backgroundImage = `url(${spacePosts[2]["imageUrl"]})`;
     thirdBackImg.style = "background-image:url(" + spacePosts[2]["imageUrl"] + ");";
     thirdDesc.textContent = spacePosts[2]["summary"];
 }
@@ -299,19 +288,16 @@ function cardArticles(spacePosts) {
 function setLaunchSlides(spacePosts) {
     firstAnchor.href = spacePosts[0]["url"];
     firstLabel.textContent = spacePosts[0]["name"];
-    // firstImage.style.backgroundImage = `url(${spacePosts[0]["imageUrl"]})`;
     firstBackImg.style = "background-image:url(" + spacePosts[0]["image"] + ");";
     firstDesc.textContent = spacePosts[0]["location"];
 
     secondAnchor.href = spacePosts[1]["url"];
     secondLabel.textContent = spacePosts[1]["name"];
-    // secondImage.style.backgroundImage = `url(${spacePosts[1]["imageUrl"]})`;
     secondBackImg.style = "background-image:url(" + spacePosts[1]["image"] + ");";
     secondDesc.textContent = spacePosts[1]["location"];
 
     thirdAnchor.href = spacePosts[2]["url"];
     thirdLabel.textContent = spacePosts[2]["name"];
-    // thirdImage.style.backgroundImage = `url(${spacePosts[2]["imageUrl"]})`;
     thirdBackImg.style = "background-image:url(" + spacePosts[2]["image"] + ");";
     thirdDesc.textContent = spacePosts[2]["location"];
 }
