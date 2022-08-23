@@ -7,6 +7,8 @@
     border-top-right-radius: var(--bs-border-radius);
 }
 
+
+
 .carousel-item{
     height:32rem;
     background:#000;
@@ -75,6 +77,10 @@ span#navbar-moon-name{
     background-position: center;
     background-size: cover;
     float:right;
+}
+
+.hidden{
+    display:none;
 }
 
 /* 

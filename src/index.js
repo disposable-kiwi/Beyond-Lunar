@@ -5,10 +5,19 @@ const articlesButton = document.getElementById('articles-button');
 const reportButton = document.getElementById('reports-button');
 const blogButton = document.getElementById('blogs-button');
 const launchButton = document.getElementById('launches-button');
+
 const buttonArray = [articlesButton, reportButton, blogButton, launchButton];
 const twitterDrop = document.getElementById('twitter-dropdown');
 const twitterBtn = document.getElementById('twitter-button');
 const twitterUrl = document.getElementById('twitter-url');
+
+const nasa = document.getElementById('twitter-NASA');
+const cnsa = document.getElementById('twitter-CNSA');
+const jaxa = document.getElementById('twitter-JAXA');
+const isro = document.getElementById('twitter-ISRO');
+const esa = document.getElementById('twitter-ESA');
+const ros = document.getElementById('twitter-Roscosmos');
+const twitterArray = [nasa,cnsa,jaxa,isro,esa,ros];
 
 const firstAnchor = document.getElementById('first-slide-anchor');
 const firstLabel = document.getElementById('first-slide-label');
@@ -84,13 +93,17 @@ const twitterObj = {
 };
 
 twitterDrop.addEventListener('click', (event) => {
+
     let agency = event.target.textContent;
-    if (agency === "Choose an Agency") {
+    let specificAgency = `twitter-${agency}`;
+    if(agency==="Choose an Agency"){
         twitterBtn.textContent = agency;
-    } else {
-        twitterUrl.href = twitterObj[agency];
-        console.log(twitterUrl.href);
-        twitterUrl.textContent = `Tweets by ${agency}`;
+    }else{
+        twitterArray.forEach((url)=>{
+            url.classList.add('hidden');
+        });
+    
+        document.getElementById(specificAgency).classList.remove('hidden');
         twitterBtn.textContent = agency;
     }
 
