@@ -6,6 +6,9 @@ const reportButton = document.getElementById('reports-button');
 const blogButton = document.getElementById('blogs-button');
 const launchButton = document.getElementById('launches-button');
 const buttonArray = [articlesButton, reportButton, blogButton, launchButton];
+const twitterDrop = document.getElementById('twitter-dropdown');
+const twitterBtn = document.getElementById('twitter-button');
+const twitterUrl = document.getElementById('twitter-url');
 
 const firstAnchor = document.getElementById('first-slide-anchor');
 const firstLabel = document.getElementById('first-slide-label');
@@ -71,7 +74,29 @@ const ninthCardTitle = document.getElementById('ninth-card-title');
 const ninthCardDesc = document.getElementById('ninth-card-desc');
 const ninthCardLink = document.getElementById('ninth-card-link');
 
-setInterval(()=>{
+const twitterObj = {
+    "NASA": "https://twitter.com/NASA?ref_src=twsrc%5Etfw",
+    "CNSA": "https://twitter.com/CNSAWatcher?ref_src=twsrc%5Etfw",
+    "JAXA": "https://twitter.com/JAXA_en?ref_src=twsrc%5Etfw",
+    "ISRO": "https://twitter.com/isro?ref_src=twsrc%5Etfw",
+    "ESA": "https://twitter.com/esa?ref_src=twsrc%5Etfw",
+    "Roscosmos": "https://twitter.com/roscosmos?ref_src=twsrc%5Etfw"
+};
+
+twitterDrop.addEventListener('click', (event) => {
+    let agency = event.target.textContent;
+    if (agency === "Choose an Agency") {
+        twitterBtn.textContent = agency;
+    } else {
+        twitterUrl.href = twitterObj[agency];
+        console.log(twitterUrl.href);
+        twitterUrl.textContent = `Tweets by ${agency}`;
+        twitterBtn.textContent = agency;
+    }
+
+});
+
+setInterval(() => {
     let today = new Date();
     let minute = today.getMinutes() > 10 ? today.getMinutes() : `0${today.getMinutes()}`;
     let second = today.getSeconds() > 10 ? today.getSeconds() : `0${today.getSeconds()}`;
@@ -79,17 +104,17 @@ setInterval(()=>{
     document.getElementById('time-button').textContent = time;
 }, 1000);
 
-document.addEventListener('keydown',function(e) {
+document.addEventListener('keydown', function (e) {
     console.log(e);
     if (e.key === "ArrowLeft") {
-       // Previous
-       document.querySelector(".carousel-control-prev").click();
-       return false;
+        // Previous
+        document.querySelector(".carousel-control-prev").click();
+        return false;
     }
     if (e.key === "ArrowRight") {
-       // Next
-       document.querySelector(".carousel-control-next").click();
-       return false;
+        // Next
+        document.querySelector(".carousel-control-next").click();
+        return false;
     }
 });
 
@@ -152,12 +177,12 @@ reportButton.addEventListener('click', () => {
 
     reportButton.classList.add('active');
 
-fetch('https://api.spaceflightnewsapi.net/v3/reports?_limit=100')
-    .then(res => res.json())
-    .then((data) => {
-        setCarouselSlides(data);
-        cardArticles(data);
-    });
+    fetch('https://api.spaceflightnewsapi.net/v3/reports?_limit=100')
+        .then(res => res.json())
+        .then((data) => {
+            setCarouselSlides(data);
+            cardArticles(data);
+        });
 });
 
 launchButton.addEventListener('click', () => {
