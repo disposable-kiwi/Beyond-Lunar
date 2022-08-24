@@ -93,7 +93,7 @@ const twitterObj = {
 };
 
 twitterDrop.addEventListener('click', (event) => {
-
+    event.preventDefault();
     let agency = event.target.textContent;
     let specificAgency = `twitter-${agency}`;
     if(agency==="Choose an Agency"){
@@ -149,27 +149,18 @@ fetch('https://api.spaceflightnewsapi.net/v3/articles?_limit=100')
         cardArticles(data);
     });
 
-//you must make the callback function on this event listener as an async function, so that you can
-//use the await keyword inside since the await keyword can only be used inside async functions
+
 articlesButton.addEventListener('click', async () => {
     buttonArray.forEach((button) => {
         button.classList.remove('active');
     });
 
     articlesButton.classList.add('active');
-    //this fetchReqeust variable is a Promise since fetch() returns a Promise Object
+  
     let fetchRequest = fetch('https://api.spaceflightnewsapi.net/v3/articles?_limit=100');
 
-    //if we didn't put await before fetchRequest, which is set equal to a Promise Object, then 
-    //we would be setting apiResultJson as a Promise Object.
-    //instead, by putting the await keyword, we wait for the Promise to resolve and then set the
-    //value of that Promise resolution as apiResultJson
     let apiResultJson = await fetchRequest;
 
-    //since the return of json() (which is asynchronous) is a Promise Object, we want to *wait* for the 
-    //resolution of its return which, upon fulfilment, will be a readable, usable array of JavaScript Objects
-    //we want to set that array of Objects equal to javaScriptObjectReturn and NOT the Promise Object, which is
-    //why we have to use the await keyword
     let javaScriptObjectReturn = await apiResultJson.json();
     setCarouselSlides(javaScriptObjectReturn);
     cardArticles(javaScriptObjectReturn);
@@ -197,7 +188,7 @@ launchButton.addEventListener('click', () => {
 
     launchButton.classList.add('active');
 
-    fetch('https://ll.thespacedevs.com/2.0.0/launch/upcoming/?format=json&limit=10&mode=list&ordering=net')
+    fetch('https://ll.thespacedevs.com/2.0.0/launch/upcoming/?format=json&limit=20&mode=list&ordering=net')
         .then(res => res.json())
         .then((data) => {
             console.log(data['results']);
